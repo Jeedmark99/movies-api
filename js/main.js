@@ -24,3 +24,15 @@
 
 
 //SEND a data requests to http://www.omdbapi.com/?apikey=9f2dc9af
+
+const searchBar = document.createElement('input');
+searchBar.setAttribute('type', 'text')
+searchBar.setAttribute('id', 'movie-search');
+searchBar.setAttribute('placeHolder', 'eg. Trumanshow');
+document.body.appendChild(searchBar);
+
+const searchBtn = document.createElement('button');
+searchBtn.setAttribute('id', 'search-btn');
+searchBtn.innerHTML= ("Search");
+document.body.appendChild(searchBtn);
+

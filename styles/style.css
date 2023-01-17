@@ -2,4 +2,10 @@ body{
     background-color: black;
     margin: 20px auto;
     text-align: center;
+    color:white
+}
+
+h1{
+    padding: 20px;
+    font-size: 42px;
 }
