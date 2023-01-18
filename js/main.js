@@ -25,10 +25,15 @@
 
 //SEND a data requests to http://www.omdbapi.com/?apikey=9f2dc9af
 
+
+
+
+//SEND a data requests to http://www.omdbapi.com/?apikey=9f2dc9af
+
 const searchBar = document.createElement('input');
 searchBar.setAttribute('type', 'text')
 searchBar.setAttribute('id', 'movie-search');
-searchBar.setAttribute('placeHolder', 'eg. Trumanshow');
+searchBar.setAttribute('placeHolder', 'eg. Truman show');
 document.body.appendChild(searchBar);
 
 const searchBtn = document.createElement('button');
@@ -36,3 +41,46 @@ searchBtn.setAttribute('id', 'search-btn');
 searchBtn.innerHTML= ("Search");
 document.body.appendChild(searchBtn);
 
+
+
+searchBtn.addEventListener('click', async function fetchData(){
+     try{
+         const response = await fetch('http://www.omdbapi.com/?apikey=9f2dc9af&s=' + searchBar.value)
+         const movies = await response.json ();
+         console.log(movies)
+         
+          for (movi of movies.Search){
+             console.log(movi);
+             document.getElementById('movie-list').innerHTML += `
+             <article>
+                 <h2>${movi.Title}</h2>
+                 <img src= '${movi.Poster}'>
+             </article>`
+ 
+          }
+    } catch (error){
+         console.log(error);
+     }
+ })
+
+
+// async function fetchData() {
+//     try{
+//         const response = await fetch('https://jsonplaceholder.typicode.com/albums/1/photos');
+//         const photos = await response.json() // built in JSON parse() => converts JSON string to js object
+//         console.log(photos);
+
+//         for(photo of photos){
+//             console.log(photo);
+//             document.getElementById('album-list').innerHTML += `
+//             <article>
+//                 <h2>${photo.title}</h2>
+//                 <img src= '${photo.thumbnailUrl}'>
+//             </article>`
+
+//         }
+//     } catch(error){
+//         console.log(error);
+//     }
+// }
+// fetchData();
