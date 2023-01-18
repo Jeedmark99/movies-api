@@ -2,7 +2,8 @@ body{
     background-color: black;
     margin: 20px auto;
     text-align: center;
-    color:white
+    color:white;
+    width: 960px;
 }
 
 h1{
@@ -20,11 +21,25 @@ a:hover{
 }
 
 aside {
-    width: 40%;
-    padding-left: 0.5rem;
-    margin-left: 0.5rem;
+    width: 100px;
+    padding-left: 2px;
+    margin-left: 2px;
+}
+
+#aside-left, #aside-right{
+    float: left;
+
+}
+
+.img{
+    height: 200px;
+    width: 150px;
+    padding-bottom: 5px;
+}
+
+#aside-right {
+    width: 100px;
+    padding-left: 2px;
+    margin-left: 2px;
     float: right;
-    box-shadow: inset 5px 0 5px -5px #29627e;
-    font-style: italic;
-    color: #29627e;
 }
