@@ -63,24 +63,3 @@ searchBtn.addEventListener('click', async function fetchData(){
      }
  })
 
-
-// async function fetchData() {
-//     try{
-//         const response = await fetch('https://jsonplaceholder.typicode.com/albums/1/photos');
-//         const photos = await response.json() // built in JSON parse() => converts JSON string to js object
-//         console.log(photos);
-
-//         for(photo of photos){
-//             console.log(photo);
-//             document.getElementById('album-list').innerHTML += `
-//             <article>
-//                 <h2>${photo.title}</h2>
-//                 <img src= '${photo.thumbnailUrl}'>
-//             </article>`
-
-//         }
-//     } catch(error){
-//         console.log(error);
-//     }
-// }
-// fetchData();
